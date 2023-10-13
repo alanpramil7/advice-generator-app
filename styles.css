@@ -1,0 +1,156 @@
+:root{
+    --font-family: 'Manrope', sans-serif;
+
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    --font-size: 28px
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+  body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--dark-blue);
+  }
+
+
+  .container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-container{
+    position: relative;
+    max-width: 33.75rem;
+    width: 90%;
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 10px;
+    padding: 3.2rem 1.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .title{
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .advice-text{
+    font-size: 1.75rem;
+    color: var(--light-cyan);
+    font-weight: 800;
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  picture img{
+    padding-bottom: 1rem;
+  }
+
+  button{
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--neon-green);
+    left: 50%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    bottom: 0%;
+    transform: translateY(50%) translateX(-50%);
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  button img{
+    color: var(--dark-blue);
+  }
+
+  .button:hover{
+    box-shadow: -1px 1px 48px 12px rgba(82, 255, 168, 1);
+    transition: all ease-in-out 0.3s;
+  }
+
+  @media (max-width: 600px){
+    .main-container{
+      padding: 2rem  1rem;
+      max-width: 350px;
+    }
+    .advice-text{
+      font-size: 1.5rem;
+    }
+    picture img{
+      padding-bottom: 2rem;
+    }
+    
+  }
+
+  
+  
+  
